@@ -4,6 +4,7 @@ import 'dart:ui' ;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/calendar_page.dart';
 
 
 void main() {
@@ -52,7 +53,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           Icons.arrow_back,
           color: Colors.grey[800],
         ),
-        onPressed: null,
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
       centerTitle: true,
       title: Text('Explore',
@@ -133,10 +136,17 @@ class searchSection extends StatelessWidget {
                     ),
                   ],
                   borderRadius: BorderRadius.all(Radius.circular(35)),
-
                 ),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) {
+                              return CalendarPage();
+                    })
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     shape: CircleBorder(),
                     backgroundColor: dGreen,
