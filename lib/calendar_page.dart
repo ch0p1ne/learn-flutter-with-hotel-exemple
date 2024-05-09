@@ -21,7 +21,7 @@ class CalendarPage extends StatelessWidget {
 }
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  Size get preferredSize => new Size.fromHeight(50);
+  Size get preferredSize => new Size.fromHeight(70);
 
   @override
   Widget build(BuildContext context) {
@@ -30,35 +30,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: Icon(
           Icons.arrow_back,
           color: Colors.grey[800],
+          size: 20,
         ),
         onPressed: () {
           Navigator.pop(context);
         },
       ),
-      centerTitle: true,
-      title: Text('Explore',
-        style: GoogleFonts.nunito(
-          color: Colors.black,
-          fontSize: 22,
-          fontWeight: FontWeight.w800,
-        ),
-      ),
-      actions: [
-        IconButton(
-          icon: Icon(
-            Icons.favorite_border_rounded,
-            color: Colors.grey[800],
-          ),
-          onPressed: null,
-        ),IconButton(
-          icon: Icon(
-            Icons.place,
-            color: Colors.grey[800],
-          ),
-          onPressed: null,
-        ),
-      ],
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.cyan,
     );
   }
 
