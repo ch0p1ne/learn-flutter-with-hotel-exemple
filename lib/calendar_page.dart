@@ -8,14 +8,12 @@ class CalendarPage extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: SingleChildScrollView(
-        child: Column(
+      body: Column(
           children: [
 
           ],
         ),
-      ),
-    );
+      );
   }
 
 }
