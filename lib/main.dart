@@ -52,9 +52,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           Icons.arrow_back,
           color: Colors.grey[800],
         ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
+        onPressed: () {},
       ),
       centerTitle: true,
       title: Text('Explore',
